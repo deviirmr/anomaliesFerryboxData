@@ -3,7 +3,7 @@
 ###### Install
 ```
 docker-compose build
-sudo docker-compose up -d
+docker-compose up -d
 docker-compose run ferrycode 
 ```
 This will tigger the python script from docker and wait for user input
