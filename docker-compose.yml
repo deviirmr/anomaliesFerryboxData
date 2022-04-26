@@ -1,0 +1,19 @@
+version: "3"
+services:
+ ferrycode:
+  # find dockerfile and build the image 
+  build: ./code/
+
+  #mount the folder so that changes can be easely sync
+  volumes:
+    - ./code:/code
+
+  #A pseudo-tty a, keep the container running”.
+  tty: true
+
+  # adds a stdin stream, keep stdin open even if not attached
+  stdin_open: true
+
+  #run the script with service name ferrycode
+  command: python ./main.py
+
